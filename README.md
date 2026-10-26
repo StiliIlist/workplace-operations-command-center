@@ -96,3 +96,8 @@ The `Reports & downloads` tab provides one-click access to existing CSV exports 
 The Budget Forecast estimates full-year operating spending using a selected number of observed months from fictional records. Each remaining month is projected as: monthly plan × observed actual/plan ratio × (1 + inflation assumption) + monthly cost adjustment, floored at zero. Lower- and higher-cost cases vary future estimates only. The forecast can be downloaded as CSV.
 
 The Reports & Downloads Center generates PDF summaries directly in the browser for executive, budget, vendor, challenge, and forecast views. PDF exports use a simple built-in text-based renderer and are not audited reports. All scenario records and values are invented for illustration and are not related to actual companies.
+
+
+## 12-month forecast visualization
+
+The budget forecast now includes a responsive SVG chart with the monthly approved plan, recorded spend through the selected cutoff month, future baseline forecast, and a shaded scenario variation envelope. Chart values recalculate from the same `forecastData()` output as the table and CSV whenever assumptions change. Example records are fictional; later months in the fictional FY2026 may be treated as scenarios, not observed financial results. Full live-browser acceptance testing is still pending.
