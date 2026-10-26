@@ -101,3 +101,8 @@ The Reports & Downloads Center generates PDF summaries directly in the browser f
 ## 12-month forecast visualization
 
 The budget forecast now includes a responsive SVG chart with the monthly approved plan, recorded spend through the selected cutoff month, future baseline forecast, and a shaded scenario variation envelope. Chart values recalculate from the same `forecastData()` output as the table and CSV whenever assumptions change. Example records are fictional; later months in the fictional FY2026 may be treated as scenarios, not observed financial results. Full live-browser acceptance testing is still pending.
+
+
+## Executive forecast assessment
+
+The Budget Forecast now generates a year-end over/under-plan assessment, ranks up to three expense categories with positive projected variances, and suggests prioritized management follow-ups with a CSV action export. Forecast category allocation uses the observed aggregate actual-to-plan ratio and distributes optional monthly extra costs in proportion to category plan. It is a simulated, assumption-driven model; action suggestions do not indicate that contracts were renegotiated or spending actually saved. Recalculate when changing assumptions. Browser interaction validation is still pending.
