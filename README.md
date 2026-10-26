@@ -106,3 +106,8 @@ The budget forecast now includes a responsive SVG chart with the monthly approve
 ## Executive forecast assessment
 
 The Budget Forecast now generates a year-end over/under-plan assessment, ranks up to three expense categories with positive projected variances, and suggests prioritized management follow-ups with a CSV action export. Forecast category allocation uses the observed aggregate actual-to-plan ratio and distributes optional monthly extra costs in proportion to category plan. It is a simulated, assumption-driven model; action suggestions do not indicate that contracts were renegotiated or spending actually saved. Recalculate when changing assumptions. Browser interaction validation is still pending.
+
+
+## Forecast accuracy and continuous improvement
+
+The forecast module can save immutable forecast assumptions/values as local snapshots for months not yet observed. As the observed-through month moves forward, it evaluates those saved future-month predictions against the current fictional budget actuals. It reports MAE (average absolute dollar error), MAPE (mean absolute percentage error over nonzero actual months), WAPE (total absolute error divided by absolute actual total), and mean signed error (forecast minus actual). If there are no eligible actual months, results are N/A; zero actuals are excluded from MAPE. Visitors can select/delete snapshots and export a comparison CSV. Snapshots are stored in browser localStorage and are not server-backed, independently verified or linked to accounting records. No automatic historical backtest or timestamp attestation is claimed.
