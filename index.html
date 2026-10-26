@@ -306,7 +306,7 @@ paint()})();
 
 (function(){
 const byId=id=>document.getElementById(id),safeText=t=>String(t??"").replace(/[&<>"]/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[ch]));
-const buttons={budget:"exportBudget",vendors:"exportVendors",procurement:"exportContracts",team:"exportTeam",hospitality:"exportExperience",events:"eventExport",invoices:"exportInvoices",workorders:"exportWOs",executive:"execExport",challenge:"challengeExport"};
+const buttons={budget:"exportBudget",vendors:"exportVendors",procurement:"exportContracts",team:"exportTeam",hospitality:"exportExperience",events:"eventExport",invoices:"exportInvoices",workorders:"exportWOs",executive:"execExport",challenge:"challengeExport",forecast:"fcExport"};
 byId("reportCsv").addEventListener("click",()=>{const key=byId("reportDataset").value,target=byId(buttons[key]);if(target){target.click();byId("reportFeedback").textContent="Download requested: "+key+" CSV."}else byId("reportFeedback").textContent="Export unavailable."});
 byId("sampleCsv").addEventListener("click",()=>download("fictional-workplace-budget-sample.csv",[["Month","Category","Planned USD","Actual USD"],["Jan","Janitorial",9000,9400],["Jan","Workplace supplies",3000,2850],["Feb","Janitorial",9000,8800],["Feb","Workplace supplies",3000,3300]]));
 byId("reportPdf").addEventListener("click",()=>{
