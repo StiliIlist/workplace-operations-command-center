@@ -410,8 +410,8 @@ function faEvaluate(snapshot){
  return{matches,mae:n?abs/n:null,wape:n&&total>0?abs/total*100:null,mape:valid.length?valid.reduce((a,x)=>a+Math.abs(x.error/x.actual)*100,0)/valid.length:null,bias:n?matches.reduce((a,x)=>a+x.error,0)/n:null};
 }
 function faRender(){
- faEl("faSelect").innerHTML=faSnapshots.map(x=>'<option value="'+x.id+'">'+x.label+'</option>').join("");
- const id=faEl("faSelect").value,chosen=faSnapshots.find(x=>x.id===id)||faSnapshots[faSnapshots.length-1];
+ const selectedBefore=faEl("faSelect").value;faEl("faSelect").innerHTML=faSnapshots.map(x=>'<option value="'+x.id+'">'+x.label+'</option>').join("");
+ if(faSnapshots.some(x=>x.id===selectedBefore))faEl("faSelect").value=selectedBefore;const id=faEl("faSelect").value,chosen=faSnapshots.find(x=>x.id===id)||faSnapshots[faSnapshots.length-1];
  if(chosen)faEl("faSelect").value=chosen.id;
  if(!chosen){faEl("faMetrics").innerHTML="";faEl("faAnalysis").textContent="No saved forecasts yet. Save a forecast snapshot to begin tracking accuracy.";faEl("faDetail").innerHTML="";return}
  const d=faEvaluate(chosen),fmt=n=>n===null?"N/A":n.toFixed(1)+"%";
