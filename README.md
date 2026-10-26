@@ -89,3 +89,10 @@ The branch-root `index.html` adds a no-login landing screen, navigation to the f
 ## Reports & Downloads Center
 
 The `Reports & downloads` tab provides one-click access to existing CSV exports across the ten dashboard categories, an editable fictional sample budget CSV, and four printable management summaries (Executive, Budget, Vendor, Budget Challenge). The report is downloaded as a self-contained HTML document; open it in a browser and use Print → Save as PDF. This is **not direct PDF generation**. Reports reflect simulated dashboard indicators and are not certified financial or operational statements. No server-side data collection or external analytics is implemented.
+
+
+## Forecast model and direct PDF downloads
+
+The Budget Forecast estimates full-year operating spending using a selected number of observed months from fictional records. Each remaining month is projected as: monthly plan × observed actual/plan ratio × (1 + inflation assumption) + monthly cost adjustment, floored at zero. Lower- and higher-cost cases vary future estimates only. The forecast can be downloaded as CSV.
+
+The Reports & Downloads Center generates PDF summaries directly in the browser for executive, budget, vendor, challenge, and forecast views. PDF exports use a simple built-in text-based renderer and are not audited reports. All scenario records and values are invented for illustration and are not related to actual companies.
