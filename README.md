@@ -84,3 +84,8 @@ Disclaimer: This is an independent, fictional portfolio demonstration. All names
 ## Public engagement experience (portfolio branch root)
 
 The branch-root `index.html` adds a no-login landing screen, navigation to the full dashboard, and a fictional Budget Optimization Challenge. Visitors select cost interventions, view scenario savings and risk scores, save choices locally in their own browser, and export a decision report to CSV. An external feedback link opens the repository's GitHub Issues page (posting requires a GitHub account). This is illustrative training content, not professional financial advice or real workplace results. GitHub Pages must be configured separately to publish this branch root.
+
+
+## Reports & Downloads Center
+
+The `Reports & downloads` tab provides one-click access to existing CSV exports across the ten dashboard categories, an editable fictional sample budget CSV, and four printable management summaries (Executive, Budget, Vendor, Budget Challenge). The report is downloaded as a self-contained HTML document; open it in a browser and use Print → Save as PDF. This is **not direct PDF generation**. Reports reflect simulated dashboard indicators and are not certified financial or operational statements. No server-side data collection or external analytics is implemented.
