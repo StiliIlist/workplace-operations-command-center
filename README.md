@@ -111,3 +111,10 @@ The Budget Forecast now generates a year-end over/under-plan assessment, ranks u
 ## Forecast accuracy and continuous improvement
 
 The forecast module can save immutable forecast assumptions/values as local snapshots for months not yet observed. As the observed-through month moves forward, it evaluates those saved future-month predictions against the current fictional budget actuals. It reports MAE (average absolute dollar error), MAPE (mean absolute percentage error over nonzero actual months), WAPE (total absolute error divided by absolute actual total), and mean signed error (forecast minus actual). If there are no eligible actual months, results are N/A; zero actuals are excluded from MAPE. Visitors can select/delete snapshots and export a comparison CSV. Snapshots are stored in browser localStorage and are not server-backed, independently verified or linked to accounting records. No automatic historical backtest or timestamp attestation is claimed.
+
+
+## Community launch and forecast comparison
+
+The Forecast Accuracy panel shows saved forecasts versus later simulated actuals, alongside a monthly approved-plan baseline calculated over the identical evaluated months. This is a descriptive baseline, not a validated forecasting competition. See [CONTRIBUTING.md](CONTRIBUTING.md) and [COMMUNITY.md](COMMUNITY.md). Starter issues: [Forecast tests](https://github.com/StiliIlist/workplace-operations-command-center/issues/1), [Accessibility](https://github.com/StiliIlist/workplace-operations-command-center/issues/2), [Method comparison](https://github.com/StiliIlist/workplace-operations-command-center/issues/3).
+
+To publish the site, configure GitHub Pages under Settings > Pages: deploy from branch `main`, folder `/(root)`. Publication and live-browser acceptance testing must be verified separately.
