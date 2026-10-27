@@ -64,7 +64,7 @@ function fillVendor(){const v=vendors.find(x=>String(x.id)===$('#vendorId').valu
 $('#vendorForm').addEventListener('submit',e=>{e.preventDefault();const v=vendors.find(x=>String(x.id)===$('#vendorId').value);v.onTime=Number($('#ontime').value);v.quality=Number($('#quality').value);v.response=Number($('#response').value);v.cost=Number($('#cost').value);if(v.onTime<0||v.onTime>100||v.quality<0||v.quality>5||v.response<0||v.cost<0||v.cost>5)return;localStorage.setItem('woc-vendors-v1',JSON.stringify(vendors));render()});
 $('#exportBudget').addEventListener('click',()=>download('budget-portfolio.csv',[['month','category','planned_usd','actual_usd','variance_usd'],...budget.map(x=>[x.month,x.category,x.planned,x.actual,x.actual-x.planned])]));
 $('#exportVendors').addEventListener('click',()=>download('vendor-performance-portfolio.csv',[['vendor','service','on_time_pct','quality_out_of_5','response_hours','cost_out_of_5','weighted_score','action'],...vendors.map(v=>[v.name,v.service,v.onTime,v.quality,v.response,v.cost,num(score(v)),action(score(v))])]));
-fillVendor();render();
+fillVendor(); // render after invoice and work-order state initialization
 
 
 // V2: Synthetic invoice, PO, and SLA tracking. Fixed as-of ensures reproducible results.
