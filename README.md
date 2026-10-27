@@ -123,3 +123,8 @@ To publish the site, configure GitHub Pages under Settings > Pages: deploy from 
 ## Forecast accuracy visualizations and comparison
 
 The Forecast Accuracy section includes a forecast-versus-actual SVG line chart, monthly absolute-error trend, and comparable MAE/WAPE scores against the approved monthly budget. New snapshots also preserve the pre-cutoff observed monthly mean as a third baseline, so it is evaluated without using future data. Older snapshots lacking this preserved historical mean show only available comparisons. Figures use fictional data and browser-local state. Results require future months to be marked observed, and do not demonstrate verified real-world forecasting improvement.
+
+
+## Quality audit — 2026-10-26
+
+Static source checks found no duplicated literal HTML IDs and no missing IDs among direct `getElementById`, `faEl`, `$fc`, `byId`, and `execEl` references. Mobile improvements: horizontally scrollable sticky tab navigation, single-column layouts for narrow screens, responsive forms, keyboard focus indicators, and reduced-motion support. JavaScript execution, PDF opening, CSV downloads, persistence, and full cross-module acceptance remain unverified in a live browser. GitHub Pages public accessibility could not be confirmed; do not promote the proposed URL as tested.
