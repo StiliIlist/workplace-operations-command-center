@@ -128,3 +128,8 @@ The Forecast Accuracy section includes a forecast-versus-actual SVG line chart, 
 ## Quality audit — 2026-10-26
 
 Static source checks found no duplicated literal HTML IDs and no missing IDs among direct `getElementById`, `faEl`, `$fc`, `byId`, and `execEl` references. Mobile improvements: horizontally scrollable sticky tab navigation, single-column layouts for narrow screens, responsive forms, keyboard focus indicators, and reduced-motion support. JavaScript execution, PDF opening, CSV downloads, persistence, and full cross-module acceptance remain unverified in a live browser. GitHub Pages public accessibility could not be confirmed; do not promote the proposed URL as tested.
+
+
+## Automated browser acceptance QA
+
+A GitHub Actions workflow at `.github/workflows/browser-qa.yml` runs Playwright Chromium smoke checks on pushes to `main` and can be started manually from Actions. The checks cover landing navigation, budget challenge calculations, forecast rendering and CSV download, forecast snapshot/accuracy display, and report PDF/CSV downloads, plus uncaught browser errors. Inspect the latest Actions run before considering them passed. The workflow does not enable GitHub Pages; the public URL and complete financial correctness still require independent validation.
