@@ -118,3 +118,8 @@ The forecast module can save immutable forecast assumptions/values as local snap
 The Forecast Accuracy panel shows saved forecasts versus later simulated actuals, alongside a monthly approved-plan baseline calculated over the identical evaluated months. This is a descriptive baseline, not a validated forecasting competition. See [CONTRIBUTING.md](CONTRIBUTING.md) and [COMMUNITY.md](COMMUNITY.md). Starter issues: [Forecast tests](https://github.com/StiliIlist/workplace-operations-command-center/issues/1), [Accessibility](https://github.com/StiliIlist/workplace-operations-command-center/issues/2), [Method comparison](https://github.com/StiliIlist/workplace-operations-command-center/issues/3).
 
 To publish the site, configure GitHub Pages under Settings > Pages: deploy from branch `main`, folder `/(root)`. Publication and live-browser acceptance testing must be verified separately.
+
+
+## Forecast accuracy visualizations and comparison
+
+The Forecast Accuracy section includes a forecast-versus-actual SVG line chart, monthly absolute-error trend, and comparable MAE/WAPE scores against the approved monthly budget. New snapshots also preserve the pre-cutoff observed monthly mean as a third baseline, so it is evaluated without using future data. Older snapshots lacking this preserved historical mean show only available comparisons. Figures use fictional data and browser-local state. Results require future months to be marked observed, and do not demonstrate verified real-world forecasting improvement.
