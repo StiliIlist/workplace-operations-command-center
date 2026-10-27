@@ -8,10 +8,13 @@ page.on('pageerror', e=>errors.push(String(e)));
 const check=(ok, label)=>{if(!ok)throw new Error(label); console.log('PASS',label)};
 try{
  await page.goto(pathToFileURL(resolve('index.html')).href);
- await page.waitForTimeout(300);
+ await page.waitForTimeout(500);
+ console.log('INITIAL_PAGE_ERRORS',JSON.stringify(errors));
+ console.log('CHALLENGE_DOM',await page.locator('#challengeChoices').innerHTML());
  check(await page.locator('#welcome').isVisible(), 'Welcome panel visible');
  await page.locator('[data-tab="challenge"]').click();
  check(await page.locator('#challenge').isVisible(),'Challenge navigation');
+ check((await page.locator('[data-choice="supplies"]').count())===1,'Challenge interventions rendered; errors: '+errors.join(' | '));
  await page.locator('[data-choice="supplies"]').check();
  check((await page.locator('#challengeMetrics').innerText()).includes('$9,000'),'Scenario calculations');
  await page.locator('[data-tab="forecast"]').click();
